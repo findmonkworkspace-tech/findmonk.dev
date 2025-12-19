@@ -1,7 +1,7 @@
 "use client"
 
 import { ArrowUpRight } from "lucide-react"
-import { motion, useInView } from "motion/react"
+import { motion, useInView, type Variants } from "motion/react"
 import { useRef } from "react"
 
 export function Hero() {
@@ -9,7 +9,7 @@ export function Hero() {
   const heroInView = useInView(heroRef, { amount: 0.6, once: false })
 
   // Animation variants for word-by-word reveal
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -20,7 +20,7 @@ export function Hero() {
     },
   }
 
-  const wordVariants = {
+  const wordVariants: Variants = {
     hidden: { opacity: 0, y: 20 },
     visible: {
       opacity: 1,
